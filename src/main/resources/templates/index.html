@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <a th:href="@{/otherpage}">
+        Click here.
+    </a>
+    <form th:action="@{/formpage}" th:object="${formdata}" method="post">
+        <input type="text" th:field="*{name}" value="Scott"/>
+        <input type="text" th:field="*{comment}" value="Our teacher"/>
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
